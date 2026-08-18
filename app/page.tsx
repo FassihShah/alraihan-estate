@@ -239,6 +239,18 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="shell pt-14">
+        <div className="relative min-h-[340px] overflow-hidden rounded-3xl md:min-h-[440px]">
+          <OfficePhoto fill />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#2c1a0d]/90 via-[#2c1a0d]/25 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 p-7 text-[#fbf7ef] md:p-12">
+            <p className="eyebrow !text-[#e5d2ae]">{l.officeEyebrow}</p>
+            <h2 className={`mt-3 max-w-xl text-2xl font-semibold md:text-4xl ${displayFont}`}>{l.officeTitle}</h2>
+            <p className="mt-3 max-w-xl leading-8 text-[#f3e7cf]/85">{l.officeText}</p>
+          </div>
+        </div>
+      </section>
+
       <section className="section">
         <div className="shell">
           <p className="eyebrow">{l.quickEyebrow}</p>
@@ -427,17 +439,6 @@ export default function HomePage() {
               {l.sendReq}
               <Arrow />
             </Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="shell pb-24">
-        <div className="grid overflow-hidden rounded-3xl border border-[#6b421f]/15 bg-[#f3e7cf] md:grid-cols-2">
-          <OfficePhoto />
-          <div className="flex flex-col justify-center p-8 md:p-12">
-            <p className="eyebrow">{l.officeEyebrow}</p>
-            <h2 className={`mt-3 text-3xl font-semibold text-[#412814] ${displayFont}`}>{l.officeTitle}</h2>
-            <p className="mt-4 leading-8 text-[#796a5b]">{l.officeText}</p>
           </div>
         </div>
       </section>
