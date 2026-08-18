@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, BadgeCheck, Check, KeySquare, MapPin, MessageCir
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Portrait from "@/components/Portrait";
+import OfficePhoto from "@/components/OfficePhoto";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useWhatsApp } from "@/contexts/WhatsAppContext";
 import { useAssistant } from "@/contexts/AssistantContext";
@@ -61,6 +62,10 @@ const copy = {
     advisorText: "نؤمن أن الاختيار العقاري الجيد يبدأ بالاستماع. نعمل بجانبك بفهم للسوق وتواصل واضح واهتمام شخصي.",
     photoNote: "مكان مخصص لصورة المستشار العقاري",
     sendReq: "أرسل متطلباتك",
+
+    officeEyebrow: "ALRAIHAN / الحضور",
+    officeTitle: "اسم موثوق في المشهد العقاري",
+    officeText: "صورة من هوية الريحان العقارية، تعكس حضوراً مهنياً واضحاً وخدمة شخصية قريبة من العميل.",
 
     riyadh: "مدينة المستقبل والرياض",
     riyadhText: "نساعدك على تحديد العقار المناسب وفق احتياجك وموقعك المفضل داخل الرياض.",
@@ -132,6 +137,10 @@ const copy = {
     advisorText: "We believe a good property choice begins with listening. We work beside you with market understanding, clear communication and personal attention.",
     photoNote: "Reserved for the real estate advisor portrait",
     sendReq: "Send your requirement",
+
+    officeEyebrow: "ALRAIHAN / PRESENCE",
+    officeTitle: "A trusted name in real estate",
+    officeText: "A glimpse of ALRAIHAN's identity: a clear professional presence and service that stays close to the client.",
 
     riyadh: "Future City and Riyadh",
     riyadhText: "We help you identify suitable property options based on your requirements and preferred location in Riyadh.",
@@ -418,6 +427,17 @@ export default function HomePage() {
               {l.sendReq}
               <Arrow />
             </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="shell pb-24">
+        <div className="grid overflow-hidden rounded-3xl border border-[#6b421f]/15 bg-[#f3e7cf] md:grid-cols-2">
+          <OfficePhoto />
+          <div className="flex flex-col justify-center p-8 md:p-12">
+            <p className="eyebrow">{l.officeEyebrow}</p>
+            <h2 className={`mt-3 text-3xl font-semibold text-[#412814] ${displayFont}`}>{l.officeTitle}</h2>
+            <p className="mt-4 leading-8 text-[#796a5b]">{l.officeText}</p>
           </div>
         </div>
       </section>
