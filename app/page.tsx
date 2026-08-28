@@ -4,7 +4,6 @@ import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check, ExternalLink, MapPin, MessageCircle, ShieldCheck, Wrench } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Portrait from "@/components/Portrait";
 import OfficePhoto from "@/components/OfficePhoto";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useWhatsApp } from "@/contexts/WhatsAppContext";
@@ -70,8 +69,12 @@ export default function HomePage() {
               <Link href="/request" className="btn btn-outline">{c.submitRequirement}<Arrow size={17} /></Link>
             </div>
           </div>
-          <div className="mx-auto flex w-full max-w-[300px] items-end justify-center py-1 md:max-w-[330px] lg:max-w-[350px]">
-            <Portrait compact note="" />
+          <div className="mx-auto grid h-[360px] w-full max-w-[300px] place-items-end overflow-hidden rounded-[140px_140px_20px_20px] border border-[#68421f]/20 bg-[#e4d0ac] shadow-[12px_12px_0_rgba(179,145,87,.14)] md:h-[420px] md:max-w-[330px] lg:h-[450px] lg:max-w-[350px]">
+            <img
+              src="/images/founder-standing.png"
+              alt={lang === "ar" ? "المستشار العقاري في الريحان العقارية" : "ALRAIHAN real estate advisor"}
+              className="h-full w-full scale-[.88] object-contain object-bottom"
+            />
           </div>
         </div>
       </section>
