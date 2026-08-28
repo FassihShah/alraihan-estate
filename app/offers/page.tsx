@@ -76,7 +76,7 @@ export default function OffersPage() {
                 "/images/WhatsApp Image 2026-08-25 at 12.27.08 AM.jpeg",
                 "/images/WhatsApp Image 2026-08-25 at 12.27.08.jpeg",
               ].map((image) => (
-                <img key={image} src={image} alt={lang === "ar" ? "مشروع تجاري" : "Commercial project"} className="h-72 w-full rounded-2xl object-cover" />
+                <img key={image} src={image} alt={lang === "ar" ? "مشروع تجاري" : "Commercial project"} className="aspect-[3/5] w-full rounded-2xl bg-[#f1e4cb] object-contain md:aspect-auto md:h-80" />
               ))}
             </div>
           </div>

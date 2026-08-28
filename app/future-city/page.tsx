@@ -103,7 +103,7 @@ export default function FutureCityPage() {
             {galleryImages.map((img, i) => (
               <div key={img} className={`overflow-hidden rounded-2xl ${i === 0 ? "md:col-span-2 md:row-span-2" : ""}`}>
                 <img
-                  className="h-full w-full object-cover transition duration-500 hover:scale-105"
+                  className={`h-full w-full transition duration-500 hover:scale-105 ${i === 2 ? "bg-[#f1e4cb] object-contain" : "object-cover object-center"}`}
                   src={img}
                   alt={lang === "ar" ? "صورة موقع أو تطوير عمراني توضيحية" : "Illustrative location or urban-development visual"}
                 />

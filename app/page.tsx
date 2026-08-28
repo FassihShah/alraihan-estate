@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, ArrowRight, BadgeCheck, Check, ExternalLink, MapPin, MessageCircle, ShieldCheck, Wrench } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, ExternalLink, MapPin, MessageCircle, ShieldCheck, Wrench } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Portrait from "@/components/Portrait";
@@ -70,13 +70,8 @@ export default function HomePage() {
               <Link href="/request" className="btn btn-outline">{c.submitRequirement}<Arrow size={17} /></Link>
             </div>
           </div>
-          <div className="relative min-h-[360px] overflow-hidden rounded-2xl bg-[#68421f] shadow-[0_20px_45px_rgba(64,39,19,.16)] md:min-h-[480px]">
-            <img src="/images/WhatsApp Image 2026-08-25 at 12.27.05 AM.jpeg" alt={lang === "ar" ? "مشهد عمراني توضيحي داخل المدينة" : "Illustrative urban development within the city"} className="absolute inset-0 h-full w-full object-cover" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#402713]/75 via-transparent to-transparent" />
-            <div className="absolute inset-x-0 bottom-0 flex items-end justify-between gap-4 p-5 text-[#fbf7ef] md:p-7">
-              <div><p className="text-sm font-bold">ALRAIHAN REAL ESTATE</p><p className="mt-1 text-xs text-[#f3e7cf]/80">{lang === "ar" ? "فرص عقارية داخل المدينة" : "Urban property opportunities"}</p></div>
-              <BadgeCheck size={28} className="shrink-0 text-[#e5d2ae]" aria-label={c.license} />
-            </div>
+          <div className="mx-auto flex w-full max-w-[300px] items-end justify-center py-1 md:max-w-[330px] lg:max-w-[350px]">
+            <Portrait compact note="" />
           </div>
         </div>
       </section>
@@ -111,13 +106,12 @@ export default function HomePage() {
           <div><h2 className={`section-title ${displayFont}`}>{l.properties}</h2><p className="text-sm font-bold text-[#825d3b]">{l.propertiesEn}</p><p className="mt-4 max-w-md leading-8 text-[#746557]">{l.propertiesText}</p>
             <div className="mt-7 grid gap-3">{propertyTypes.map((property) => <Link key={property.key} href={`/request?type=${property.key}`} className="group flex items-center justify-between gap-4 rounded-xl border border-[#6b421f]/15 bg-[#fbf7ef] px-5 py-4 text-[#402713] no-underline transition hover:border-[#6b421f]/40"><span><b className="block">{lang === "ar" ? property.titleAr : property.titleEn}</b><small className="mt-1 block text-xs font-bold text-[#825d3b]">{lang === "ar" ? property.titleEn : property.titleAr}</small></span><Arrow size={18} className="shrink-0 transition group-hover:translate-x-1 rtl:group-hover:-translate-x-1" /></Link>)}</div>
           </div>
-          <div className="grid gap-4 sm:grid-cols-[1.05fr_.95fr]"><img src={propertyImages[0]} alt={lang === "ar" ? "تطوير عمراني توضيحي داخل الرياض" : "Illustrative urban development in Riyadh"} className="h-[300px] w-full rounded-2xl object-cover sm:h-full" /><div className="grid gap-4"><img src={propertyImages[1]} alt={lang === "ar" ? "برج سكني توضيحي" : "Illustrative residential tower"} className="h-[180px] w-full rounded-2xl object-cover" /><img src={propertyImages[2]} alt={lang === "ar" ? "مشهد عمراني توضيحي" : "Illustrative city development"} className="h-[180px] w-full rounded-2xl object-cover" /></div></div>
+          <div className="grid gap-4 sm:grid-cols-[1.05fr_.95fr]"><img src={propertyImages[0]} alt={lang === "ar" ? "تطوير عمراني توضيحي داخل الرياض" : "Illustrative urban development in Riyadh"} className="h-[260px] w-full rounded-2xl object-cover object-center sm:h-full" /><div className="grid gap-4"><img src={propertyImages[1]} alt={lang === "ar" ? "برج سكني توضيحي" : "Illustrative residential tower"} className="h-[220px] w-full rounded-2xl object-cover object-center sm:h-[180px]" /><img src={propertyImages[2]} alt={lang === "ar" ? "مشهد عمراني توضيحي" : "Illustrative city development"} className="h-[220px] w-full rounded-2xl object-cover object-center sm:h-[180px]" /></div></div>
         </div>
       </section>
 
       <section id="about" className="section">
-        <div className="shell grid gap-6 lg:grid-cols-[.42fr_.76fr_1.05fr]">
-          <div className="mx-auto w-full max-w-[220px] lg:mx-0"><Portrait compact note="" /></div>
+        <div className="shell grid gap-6 lg:grid-cols-[.78fr_1.22fr]">
           <div className="flex flex-col justify-center px-2 py-4 lg:px-3"><p className="eyebrow">{l.advisor}</p><p className="mt-2 text-sm font-bold text-[#825d3b]">{l.advisorEn}</p><p className="mt-5 max-w-sm leading-8 text-[#746557]">{l.advisorText}</p><Link href="/about" className="btn btn-outline mt-7 w-fit">{l.learnMore}<Arrow size={17} /></Link></div>
           <div className="relative min-h-[330px] overflow-hidden rounded-2xl bg-[#68421f]"><OfficePhoto fill /><div className="absolute inset-0 bg-gradient-to-t from-[#402713]/85 via-[#402713]/20 to-transparent" /><div className="absolute inset-x-0 bottom-0 p-6 text-[#fbf7ef]"><h2 className={`text-2xl font-semibold ${displayFont}`}>{l.company}</h2><p className="mt-1 text-xs font-bold text-[#e5d2ae]">{l.companyEn}</p><p className="mt-4 max-w-md text-sm leading-7 text-[#f3e7cf]/85">{l.companyText}</p></div></div>
         </div>
