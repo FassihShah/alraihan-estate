@@ -52,7 +52,7 @@ export default function OffersPage() {
                   <div className="relative">
                     <img
                       className="h-56 w-full object-cover opacity-90"
-                      src={`https://images.unsplash.com/photo-${offer.image}?auto=format&fit=crop&w=800&q=80`}
+                      src={offer.image}
                       alt={lang === "ar" ? p.titleAr : p.titleEn}
                     />
                   </div>
@@ -65,6 +65,35 @@ export default function OffersPage() {
                 </div>
               );
             })}
+          </div>
+
+          <div className="mt-16">
+            <h2 className={`section-title ${displayFont}`}>{lang === "ar" ? "مشاريع تجارية" : "Commercial Projects"}</h2>
+            <p className="max-w-xl leading-8 text-[#746557]">{lang === "ar" ? "صور للمشاريع والفرص التجارية، ويمكنك التواصل معنا لمعرفة التفاصيل المتاحة." : "Visuals for commercial projects and opportunities. Contact us for the available details."}</p>
+            <div className="mt-8 grid gap-4 md:grid-cols-3">
+              {[
+                "/images/WhatsApp Image 2026-08-25 at 12.27.08 A.jpeg",
+                "/images/WhatsApp Image 2026-08-25 at 12.27.08 AM.jpeg",
+                "/images/WhatsApp Image 2026-08-25 at 12.27.08.jpeg",
+              ].map((image) => (
+                <img key={image} src={image} alt={lang === "ar" ? "مشروع تجاري" : "Commercial project"} className="h-72 w-full rounded-2xl object-cover" />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-16">
+            <h2 className={`section-title ${displayFont}`}>{lang === "ar" ? "فيديوهات المشاريع" : "Project Videos"}</h2>
+            <div className="mt-8 grid gap-5 md:grid-cols-2">
+              {[
+                { src: "/images/WhatsApp Video 2026-08-25 at 12.27.06 AM.mp4", poster: "/images/WhatsApp Image 2026-08-25 at 12.27.08 A.jpeg" },
+                { src: "/images/WhatsApp Video 2026-08-25 at 12.27.07 AM.mp4", poster: "/images/WhatsApp Image 2026-08-25 at 12.27.08.jpeg" },
+              ].map((video) => (
+                <video key={video.src} controls preload="metadata" poster={video.poster} className="w-full rounded-2xl bg-[#402713]" aria-label={lang === "ar" ? "فيديو مشروع" : "Project video"}>
+                  <source src={video.src} type="video/mp4" />
+                  {lang === "ar" ? "المتصفح لا يدعم تشغيل الفيديو." : "Your browser does not support video playback."}
+                </video>
+              ))}
+            </div>
           </div>
 
           <div className="mx-auto mt-14 max-w-xl rounded-2xl border border-[#6b421f]/15 bg-[#f3e7cf] p-8 text-center">

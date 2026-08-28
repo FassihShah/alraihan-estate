@@ -38,6 +38,7 @@ export default function ServicesPage() {
   const { open } = useWhatsApp();
   const c = t(lang);
   const l = copy[lang];
+  const comingSoon = lang === "ar" ? "قريباً / Under Construction" : "Under Construction / قريباً";
   const displayFont = lang === "ar" ? "arabic-display" : "display";
   const Arrow = lang === "ar" ? ArrowLeft : ArrowRight;
 
@@ -62,10 +63,14 @@ export default function ServicesPage() {
                   <div className="mt-14">
                     <h3 className="text-xl font-bold text-[#402713]">{title}</h3>
                     <p className="mt-3 max-w-md text-sm leading-7 text-[#746557]">{desc}</p>
-                    <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#68421f]">
-                      {l.explore}
-                      <Arrow size={17} />
-                    </span>
+                    {s.isComingSoon ? (
+                      <span className="mt-5 inline-flex border border-[#68421f]/30 px-3 py-1.5 text-xs font-bold text-[#68421f]">{comingSoon}</span>
+                    ) : (
+                      <span className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-[#68421f]">
+                        {l.explore}
+                        <Arrow size={17} />
+                      </span>
+                    )}
                   </div>
                 </>
               );

@@ -25,6 +25,8 @@ body { margin:0; color:var(--text); background:var(--cream); font-family:"Manrop
 .portrait-placeholder.has-photo:before,.portrait-placeholder.has-photo:after { display:none; }
 .portrait-image { position:absolute; inset:0; z-index:1; width:100%; height:100%; object-fit:cover; object-position:center top; }
 .portrait-image.hero-photo { object-position:center 10%; }
+.portrait-placeholder.portrait-compact { min-height:320px; border-radius:130px 130px 18px 18px; box-shadow:10px 10px 0 rgba(179,145,87,.13); }
+.portrait-image.compact-photo { object-fit:contain; object-position:center bottom; padding:8px 2px 0; }
 .portrait-placeholder.has-photo .portrait-note { display:none; }
 .logo-image { display:block; height:52px; width:auto; max-width:190px; object-fit:contain; mix-blend-mode:multiply; }
 .office-photo { width:100%; height:100%; object-fit:cover; min-height:300px; }

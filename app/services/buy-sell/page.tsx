@@ -105,7 +105,7 @@ export default function BuySellPage() {
               >
                 <img
                   className="h-48 w-full object-cover transition duration-500 group-hover:scale-105"
-                  src={`https://images.unsplash.com/photo-${p.image}?auto=format&fit=crop&w=800&q=80`}
+                  src={p.image}
                   alt={lang === "ar" ? p.titleAr : p.titleEn}
                 />
                 <div className="p-5">

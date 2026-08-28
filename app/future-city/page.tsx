@@ -48,7 +48,15 @@ const copy = {
 };
 
 const considerIcons = [MapPin, Home, Compass, Building2, Sparkles, Wallet];
-const galleryImages = ["1674822858255-fcc093a1ef43", "1492763204268-fa0b1a55f143", "1551031749-9257c3aee0df", "1758448511487-15f69dd6107b", "1613977257363-707ba9348227"];
+const galleryImages = [
+  "/images/WhatsApp Image 2026-08-25 at 12.27.10 AM.jpeg",
+  "/images/WhatsApp Image 2026-08-25 at 12.27.10.jpeg",
+  "/images/WhatsApp Image 2026-08-25 at 12.29.25 AM.jpeg",
+];
+
+const locationVideos = [
+  { src: "/images/WhatsApp Video 2026-08-25 at 12.27.10 AM.mp4", poster: "/images/WhatsApp Image 2026-08-25 at 12.27.10 AM.jpeg" },
+];
 
 export default function FutureCityPage() {
   const { lang } = useLanguage();
@@ -65,7 +73,7 @@ export default function FutureCityPage() {
         description={l.description}
         trail={[{ label: lang === "ar" ? "مدينة المستقبل" : "Future City" }]}
         variant="image"
-        image="1506795213373-430e921fe2ed"
+        image="/images/WhatsApp Image 2026-08-25 at 12.27.10 AM.jpeg"
       />
 
       <section className="section">
@@ -96,10 +104,25 @@ export default function FutureCityPage() {
               <div key={img} className={`overflow-hidden rounded-2xl ${i === 0 ? "md:col-span-2 md:row-span-2" : ""}`}>
                 <img
                   className="h-full w-full object-cover transition duration-500 hover:scale-105"
-                  src={`https://images.unsplash.com/photo-${img}?auto=format&fit=crop&w=${i === 0 ? 1200 : 700}&q=80`}
-                  alt="Riyadh"
+                  src={img}
+                  alt={lang === "ar" ? "صورة موقع أو تطوير عمراني توضيحية" : "Illustrative location or urban-development visual"}
                 />
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="shell">
+          <h2 className={`section-title ${displayFont}`}>{lang === "ar" ? "مشاهدة الموقع" : "Location Media"}</h2>
+          <p className="max-w-xl leading-8 text-[#746557]">{lang === "ar" ? "مادة مرئية مرتبطة بالموقع لمساعدتك على تكوين انطباع أوضح قبل إرسال طلبك." : "Location media to help you build a clearer impression before submitting your request."}</p>
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
+            {locationVideos.map((video) => (
+              <video key={video.src} controls preload="metadata" poster={video.poster} className="w-full rounded-2xl bg-[#402713]" aria-label={lang === "ar" ? "فيديو موقع" : "Location video"}>
+                <source src={video.src} type="video/mp4" />
+                {lang === "ar" ? "المتصفح لا يدعم تشغيل الفيديو." : "Your browser does not support video playback."}
+              </video>
             ))}
           </div>
         </div>

@@ -22,7 +22,7 @@ export default function PageHero({ eyebrow, title, description, trail, variant =
     return (
       <section className="relative overflow-hidden bg-[#412814] py-20 md:py-28">
         <img
-          src={`https://images.unsplash.com/photo-${image}?auto=format&fit=crop&w=1800&q=80`}
+          src={image.startsWith("/") ? image : `https://images.unsplash.com/photo-${image}?auto=format&fit=crop&w=1800&q=80`}
           alt=""
           className="absolute inset-0 h-full w-full object-cover opacity-45"
         />

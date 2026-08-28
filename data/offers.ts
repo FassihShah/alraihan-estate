@@ -1,7 +1,7 @@
 import type { PropertyTypeKey } from "./propertyTypes";
 
 export const demoOffers: { type: PropertyTypeKey; image: string }[] = [
-  { type: "villa", image: "1580587771525-78b9dba3b914" },
-  { type: "apartment", image: "1758448511487-15f69dd6107b" },
-  { type: "land", image: "1500382017468-9049fed747ef" },
+  { type: "villa", image: "/images/WhatsApp Image 2026-08-25 at 12.27.05 AM.jpeg" },
+  { type: "apartment", image: "/images/WhatsApp Image 2026-08-25 at 12.27.06 AM.jpeg" },
+  { type: "land", image: "/images/WhatsApp Image 2026-08-25 at 12.27.10 AM.jpeg" },
 ];

@@ -1,6 +1,6 @@
-import { Landmark, Home, Building2, Sparkles, Search, MessageSquareText, type LucideIcon } from "lucide-react";
+import { Landmark, Home, Building2, Sparkles, Search, MessageSquareText, Wrench, type LucideIcon } from "lucide-react";
 
-export type ServiceKey = "buySell" | "rental" | "management" | "marketing" | "search" | "consultation";
+export type ServiceKey = "buySell" | "rental" | "management" | "marketing" | "search" | "consultation" | "maintenance";
 
 export const services: {
   key: ServiceKey;
@@ -10,6 +10,7 @@ export const services: {
   descAr: string;
   descEn: string;
   href?: string;
+  isComingSoon?: boolean;
 }[] = [
   {
     key: "buySell",
@@ -64,5 +65,14 @@ export const services: {
     descAr: "رؤية محلية وواضحة تساعدك على اتخاذ قرار عقاري واثق.",
     descEn: "Clear, local guidance to help you make a confident property decision.",
     href: "/services",
+  },
+  {
+    key: "maintenance",
+    icon: Wrench,
+    titleAr: "صيانة المنازل",
+    titleEn: "Home Maintenance",
+    descAr: "خدمة مرتبطة باحتياجات المنزل والعقار، ويجري تجهيزها حالياً.",
+    descEn: "A home and property maintenance service currently being prepared.",
+    isComingSoon: true,
   },
 ];

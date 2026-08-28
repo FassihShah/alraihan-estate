@@ -41,7 +41,7 @@ export default function PropertiesPage() {
               <div className={i % 2 === 1 ? "md:order-2" : ""}>
                 <img
                   className="h-[300px] w-full rounded-2xl object-cover md:h-[380px]"
-                  src={`https://images.unsplash.com/photo-${p.image}?auto=format&fit=crop&w=1200&q=80`}
+                  src={p.image}
                   alt={lang === "ar" ? p.titleAr : p.titleEn}
                 />
               </div>
