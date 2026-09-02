@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-export default function BrandLogo() {
+export default function BrandLogo({ className = "" }: { className?: string }) {
   const [loaded, setLoaded] = useState(true);
   return (
     <>
@@ -10,7 +10,7 @@ export default function BrandLogo() {
         <img
           src="/images/alraihan-logo.png"
           alt="ALRAIHAN REAL ESTATE"
-          className="logo-image"
+          className={`logo-image ${className}`}
           onError={() => setLoaded(false)}
         />
       )}

@@ -32,16 +32,37 @@ export default function Header() {
   const isActive = (href: string) => (href === "/" ? pathname === "/" : pathname.startsWith(href));
 
   return (
-    <header
-      className={`sticky top-0 z-40 border-b border-[#6b421f]/15 bg-[#faf5ea]/95 backdrop-blur transition-all duration-300 ${
-        scrolled ? "shadow-[0_8px_24px_rgba(64,39,19,.07)]" : ""
-      }`}
-    >
-      <div className={`shell flex items-center justify-between gap-4 transition-all duration-300 ${scrolled ? "h-[66px]" : "h-[78px]"}`}>
-        <Link href="/" aria-label="Home" className="flex items-center gap-2 text-left no-underline">
-          <BrandLogo />
-        </Link>
-        <nav className="hidden items-center gap-6 text-[.82rem] font-semibold text-[#6b421f] lg:flex">
+    <>
+      <header className={`sticky top-0 z-40 border-b border-[#6b421f]/15 bg-[#faf5ea]/95 backdrop-blur ${scrolled ? "shadow-[0_8px_24px_rgba(64,39,19,.10)]" : ""}`}>
+        <div className="bg-[#402713] text-[#fbf7ef]">
+          <div className="shell flex min-h-[78px] items-center justify-between gap-3 py-3 sm:min-h-[86px]">
+            <Link href="/" aria-label="ALRAIHAN REAL ESTATE home" className="flex min-w-0 items-center gap-3 no-underline sm:gap-4">
+              <span className="grid h-14 w-[68px] shrink-0 place-items-center rounded-md bg-[#f3e7cf] p-1 sm:h-16 sm:w-[78px]">
+                <BrandLogo className="!h-12 !max-w-[60px] sm:!h-14 sm:!max-w-[70px]" />
+              </span>
+              <span className="min-w-0 text-start leading-tight">
+                <b className="block truncate text-lg font-semibold sm:text-xl">{lang === "ar" ? "الريحان العقارية" : "ALRAIHAN REAL ESTATE"}</b>
+                <small className="mt-1 block truncate text-[.63rem] font-bold tracking-[.12em] text-[#e5d2ae] sm:text-[.68rem]">{lang === "ar" ? "ALRAIHAN REAL ESTATE COMPANY" : "شركة الريحان العقارية"}</small>
+              </span>
+            </Link>
+            <div className="flex shrink-0 items-center gap-2">
+              <button onClick={toggleLang} className="hidden rounded-full border border-[#e5d2ae]/45 px-3 py-2 text-xs font-bold text-[#fbf7ef] sm:inline-flex">
+                <Globe2 size={14} className="mr-1" />
+                {c.langToggle}
+              </button>
+              <button onClick={open} className="hidden rounded-lg bg-[#f3e7cf] px-4 py-2.5 text-xs font-bold text-[#402713] sm:inline-flex sm:items-center sm:gap-2">
+                <MessageCircle size={16} />
+                {c.whatsapp}
+              </button>
+              <button aria-label="Menu" onClick={() => setMenu(!menu)} className="grid h-10 w-10 place-items-center rounded-full border border-[#e5d2ae]/45 text-[#fbf7ef] lg:hidden">
+                {menu ? <X /> : <Menu />}
+              </button>
+            </div>
+          </div>
+        </div>
+        <div className="border-t border-[#e5d2ae]/20 bg-[#faf5ea]">
+          <div className="shell flex h-[56px] items-center justify-center">
+            <nav className="hidden items-center justify-center gap-6 text-[.82rem] font-semibold text-[#6b421f] lg:flex">
           {nav.map((item) => (
             <div key={item.href} className="group relative">
               <Link
@@ -68,31 +89,18 @@ export default function Header() {
               )}
             </div>
           ))}
-        </nav>
-        <div className="flex items-center gap-2">
-          <button
-            onClick={toggleLang}
-            className="hidden rounded-full border border-[#6b421f]/25 px-3 py-2 text-xs font-bold text-[#6b421f] sm:inline-flex"
-          >
-            <Globe2 size={14} className="mr-1" />
-            {c.langToggle}
-          </button>
-          <button onClick={open} className="hidden sm:inline-flex btn btn-primary !px-4 !py-2.5">
-            <MessageCircle size={16} />
-            {c.whatsapp}
-          </button>
-          <button aria-label="Menu" onClick={() => setMenu(!menu)} className="grid h-10 w-10 place-items-center rounded-full border border-[#6b421f]/25 text-[#6b421f] lg:hidden">
-            {menu ? <X /> : <Menu />}
-          </button>
+            </nav>
+            <p className="text-center text-[.67rem] font-bold tracking-[.13em] text-[#825d3b] lg:hidden">ALRAIHAN REAL ESTATE</p>
+          </div>
         </div>
-      </div>
+      </header>
       <AnimatePresence>
         {menu && (
           <motion.div
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -12 }}
-            className="fixed inset-x-0 top-[79px] bottom-0 overflow-y-auto bg-[#faf5ea] lg:hidden"
+            className="fixed inset-x-0 bottom-0 top-[134px] z-40 overflow-y-auto bg-[#faf5ea] lg:hidden"
           >
             <div className="shell flex min-h-full flex-col py-8">
               {nav.map((item) => (
@@ -130,6 +138,6 @@ export default function Header() {
           </motion.div>
         )}
       </AnimatePresence>
-    </header>
+    </>
   );
 }
