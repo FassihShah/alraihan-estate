@@ -54,7 +54,7 @@ export default function HomePage() {
     <section id="home" className="overflow-hidden bg-[#f1e4cb] py-7 md:py-10">
       <div className="shell grid grid-cols-[112px_minmax(0,1fr)] items-stretch gap-4 sm:grid-cols-[145px_minmax(0,1fr)] sm:gap-6 lg:grid-cols-[190px_minmax(0,1fr)_minmax(350px,.88fr)] lg:gap-8" dir="ltr">
         <div className="relative min-h-[242px] overflow-hidden rounded-[72px_72px_14px_14px] border border-[#68421f]/20 bg-[#e4d0ac] shadow-[8px_8px_0_rgba(179,145,87,.14)] sm:min-h-[286px] lg:min-h-[400px] lg:rounded-[110px_110px_18px_18px]" aria-label={lang === "ar" ? "صورة مستشار الريحان العقاري" : "ALRAIHAN real estate advisor"}>
-          <img src="/images/founder-standing.png" alt="" className="h-full w-full scale-[.82] object-contain object-bottom sm:scale-[.86]" />
+          <img src="/images/founder-standing-transparent.png" alt="" className="h-full w-full scale-[.82] object-contain object-bottom sm:scale-[.86]" />
         </div>
         <div className="flex flex-col justify-center py-2 text-start lg:py-7" dir={lang === "ar" ? "rtl" : "ltr"}>
           <p className="eyebrow"><MapPin size={15} />{lang === "ar" ? "الرياض، المملكة العربية السعودية" : "RIYADH, SAUDI ARABIA"}</p>
