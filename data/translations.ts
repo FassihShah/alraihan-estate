@@ -21,8 +21,8 @@ export function t(lang: Lang) {
     close: ar ? "إغلاق" : "Close",
     submitRequirement: ar ? "أرسل طلبك" : "Submit Your Requirement",
     footerNote: ar
-      ? "خدمة عقارية شخصية في الرياض، مبنية على فهم السوق واحتياج العميل."
-      : "Personal real estate service in Riyadh, built on local market understanding and client needs.",
+      ? "شركة عقارية مرخّصة في الرياض، تخدم الأفراد والشركات."
+      : "A licensed real estate company in Riyadh, serving individuals and businesses.",
     footerNav: ar ? "التصفح" : "Navigation",
     footerLicense: ar ? "الترخيص" : "License",
     rights: ar ? `© ${new Date().getFullYear()} الريحان العقارية` : `© ${new Date().getFullYear()} ALRAIHAN REAL ESTATE`,

@@ -5,6 +5,7 @@ import { ArrowLeft, ArrowRight, CheckCircle2, MessageCircle } from "lucide-react
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Breadcrumb from "@/components/Breadcrumb";
+import BackButton from "@/components/BackButton";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useWhatsApp } from "@/contexts/WhatsAppContext";
 import { t } from "@/data/translations";
@@ -63,6 +64,7 @@ export default function Article() {
       <Header />
       <article>
         <div className="shell max-w-4xl py-14">
+          <BackButton className="mb-4" />
           <Breadcrumb trail={[{ label: lang === "ar" ? "المدونة" : "Blog", href: "/blog" }, { label: l.title }]} />
           <div className="mt-8 text-center">
             <p className="eyebrow justify-center">{l.category}</p>

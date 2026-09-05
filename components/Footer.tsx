@@ -8,7 +8,7 @@ import BrandLogo from "./BrandLogo";
 
 export default function Footer() {
   const { lang, toggleLang } = useLanguage();
-  const nav = getNav(lang);
+  const nav = getNav(lang).filter((item) => ["/about", "/services", "/properties", "/blog", "/contact"].includes(item.href));
   const c = t(lang);
   return (
     <footer className="bg-[#412814] py-12 text-[#fbf7ef]">

@@ -17,8 +17,8 @@ export const services: {
     icon: Home,
     titleAr: "البيع والشراء",
     titleEn: "Buying & Selling",
-    descAr: "نرافقك في فهم الخيارات، سواء كنت ترغب في شراء عقار أو بيعه.",
-    descEn: "We guide you through the options, whether you are buying or selling.",
+    descAr: "إرشاد واضح لخياراتك حتى تشتري أو تبيع بثقة.",
+    descEn: "Clear guidance through your options so you buy or sell with confidence.",
     href: "/services/buy-sell",
   },
   {
@@ -35,8 +35,8 @@ export const services: {
     icon: Landmark,
     titleAr: "إدارة الأملاك",
     titleEn: "Property Management",
-    descAr: "نناقش معك احتياجك في إدارة عقارك بأسلوب مبني على الثقة.",
-    descEn: "We discuss your property management needs with a trusted approach.",
+    descAr: "متابعة واضحة ومبنية على الثقة لاحتياجات إدارة عقارك.",
+    descEn: "Clear, trusted follow-through on your property management needs.",
     href: "/services/property-management",
   },
   {
@@ -44,8 +44,8 @@ export const services: {
     icon: Sparkles,
     titleAr: "التسويق العقاري",
     titleEn: "Property Marketing",
-    descAr: "عرض احترافي لعقارك يركز على قيمته والجمهور المناسب له.",
-    descEn: "Professional presentation of your property focused on value and audience.",
+    descAr: "عرض احترافي يضع عقارك أمام الجمهور المناسب له.",
+    descEn: "Professional marketing that puts your property in front of the right audience.",
     href: "/services",
   },
   {

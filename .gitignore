@@ -27,3 +27,6 @@ next-env.d.ts
 
 # vercel
 .vercel
+
+# local reference material (not part of the site)
+/_client-feedback/

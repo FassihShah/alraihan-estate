@@ -3,6 +3,7 @@
 import { ReactNode } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import Breadcrumb, { Crumb } from "./Breadcrumb";
+import BackButton from "./BackButton";
 
 type Props = {
   eyebrow: string;
@@ -28,6 +29,7 @@ export default function PageHero({ eyebrow, title, description, trail, variant =
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#2c1a0d]/85 via-[#2c1a0d]/65 to-[#412814]" />
         <div className="shell relative z-10">
+          <BackButton dark className="mb-4" />
           <Breadcrumb trail={trail} dark />
           <p className="eyebrow mt-6 !text-[#e5d2ae]">{eyebrow}</p>
           <h1 className={`mt-4 max-w-3xl text-[clamp(2.1rem,4.6vw,3.8rem)] font-semibold leading-[1.25] text-[#fbf7ef] ${displayFont}`}>
@@ -45,6 +47,7 @@ export default function PageHero({ eyebrow, title, description, trail, variant =
       <span className="watermark bottom-6 start-[46%]">R</span>
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_78%_20%,rgba(255,255,255,.7),transparent_34%)]" />
       <div className="shell relative z-10">
+        <BackButton className="mb-4" />
         <Breadcrumb trail={trail} />
         <p className="eyebrow mt-6">{eyebrow}</p>
         <h1 className={`mt-4 max-w-3xl text-[clamp(2.1rem,4.6vw,3.8rem)] font-semibold leading-[1.25] text-[#402713] ${displayFont}`}>
